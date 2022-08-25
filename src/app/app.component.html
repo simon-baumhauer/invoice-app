@@ -1,15 +1,20 @@
+<div class="sidenav">
+  <div class="logo-container"><img src="/assets/logo.svg" alt="" /></div>
+</div>
+
 <mat-drawer-container class="example-container" autosize>
   <!-- Sidenav -->
 
-  <mat-drawer #drawer class="example-sidenav" mode="side">
+  <mat-drawer #drawer mode="side">
     <h1>Create new Invoice</h1>
+    <!-- Form -->
     <form action="">
       <h2>Bill From</h2>
-      <div class="direction-column">
+      <div class="column-1">
         <label for="">Street Adress</label>
         <input type="text" />
       </div>
-      <div style="display: flex">
+      <div class="column-3">
         <div>
           <label for="">City</label>
           <input type="text" />
@@ -24,23 +29,19 @@
         </div>
       </div>
       <h2>Bill to</h2>
-      <div class="direction-column">
+      <div class="column-1">
         <label for="">Client's Name</label>
         <input type="text" />
       </div>
-      <div class="direction-column">
+      <div class="column-1">
         <label for="">Client's Email</label>
         <input type="text" />
       </div>
-      <div class="direction-column">
+      <div class="column-1">
         <label for="">Street Adress</label>
         <input type="text" />
       </div>
-      <div class="direction-column">
-        <label for="">Street Adress</label>
-        <input type="text" />
-      </div>
-      <div style="display: flex">
+      <div class="column-3">
         <div>
           <label for="">City</label>
           <input type="text" />
@@ -54,18 +55,17 @@
           <input type="text" />
         </div>
       </div>
-      <div style="display: flex">
+      <div class="column-2">
         <div class="direction-column">
-          <label for="">Invoice Date</label>
-          <input type="date" />
+          <label for="">date</label>
+          <input type="text" />
         </div>
         <div class="direction-column">
-          <label for="">Payment Terms</label>
+          <label for="">payment terms</label>
           <input type="text" />
         </div>
       </div>
-
-      <div class="direction-column">
+      <div class="column-1">
         <label for="">Project Description</label>
         <input type="text" />
       </div>
