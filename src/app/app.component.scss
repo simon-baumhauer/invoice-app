@@ -1,3 +1,10 @@
+.direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Sidenav
+
 mat-drawer-container {
   height: 100vh;
 }
@@ -5,13 +12,36 @@ mat-drawer-container {
 mat-drawer {
   display: flex;
   justify-content: center;
-  width: 300px;
+  width: 550px;
 }
-
 mat-drawer-inner-conatienr {
   display: flex;
   justify-content: center;
 }
+
+// Forms
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 30px;
+
+  label {
+    text-align: start;
+    margin-top: 20px;
+  }
+
+  * {
+    width: 100%;
+  }
+}
+
+// Header
 
 .header {
   margin-top: 100px;

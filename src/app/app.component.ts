@@ -9,12 +9,5 @@ import { FormControl } from '@angular/forms';
 export class AppComponent {
   toppings = new FormControl('');
 
-  toppingList: string[] = [
-    'Extra cheese',
-    'Mushroom',
-    'Onion',
-    'Pepperoni',
-    'Sausage',
-    'Tomato',
-  ];
+  toppingList: string[] = ['peding', 'paid'];
 }
