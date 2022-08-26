@@ -6,7 +6,7 @@
   <!-- Sidenav -->
 
   <mat-drawer #drawer mode="side">
-    <h1>Create new Invoice</h1>
+    <h1>New Invoice</h1>
     <!-- Form -->
     <form action="">
       <h2>Bill From</h2>
@@ -57,17 +57,40 @@
       </div>
       <div class="column-2">
         <div class="direction-column">
-          <label for="">date</label>
+          <label for="">Invoice Date</label>
           <input type="text" />
         </div>
         <div class="direction-column">
-          <label for="">payment terms</label>
+          <label for="">Payment Terms</label>
           <input type="text" />
         </div>
       </div>
       <div class="column-1">
         <label for="">Project Description</label>
         <input type="text" />
+      </div>
+      <h2>Item item-list</h2>
+      <div class="item">
+        <label for="">Item Name</label> <label for="">Qty.</label>
+        <label for="">Price</label> <label class="total-label">Total</label>
+      </div>
+      <div class="item">
+        <div>
+          <input type="text" />
+        </div>
+        <div>
+          <input type="text" />
+        </div>
+        <div>
+          <input type="text" />
+        </div>
+        <span>0000</span>
+        <img src="/assets/icon-delete.svg" alt="" />
+      </div>
+      <button mat-stroked-button>+Add New Item</button>
+      <div style="display: flex; justify-content: space-between">
+        <button mat-stroked-button>Discard</button>
+        <button mat-flat-button color="primary">Save</button>
       </div>
     </form>
   </mat-drawer>
