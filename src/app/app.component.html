@@ -31,7 +31,11 @@
       <h2>Bill to</h2>
       <div class="column-1">
         <label for="">Client's Name</label>
-        <input type="text" />
+        <input
+          [(ngModel)]="invoice.clientsName"
+          type="text"
+          name="clientsName"
+        />
       </div>
       <div class="column-1">
         <label for="">Client's Email</label>
@@ -90,7 +94,9 @@
       <button mat-stroked-button>+Add New Item</button>
       <div style="display: flex; justify-content: space-between">
         <button mat-stroked-button>Discard</button>
-        <button mat-flat-button color="primary">Save</button>
+        <button mat-flat-button color="primary" (click)="saveInvoice()">
+          Save
+        </button>
       </div>
     </form>
   </mat-drawer>
@@ -120,6 +126,8 @@
       </mat-select>
     </mat-form-field>
     <button
+      mat-flat-button
+      color="primary"
       class="btn-sidenav"
       type="button"
       mat-button
