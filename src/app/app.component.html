@@ -12,20 +12,32 @@
       <h2>Bill From</h2>
       <div class="column-1">
         <label for="">Street Adress</label>
-        <input type="text" />
+        <input
+          [(ngModel)]="invoice.streeAdressFrom"
+          type="text"
+          name="streeAdressFrom"
+        />
       </div>
       <div class="column-3">
         <div>
           <label for="">City</label>
-          <input type="text" />
+          <input [(ngModel)]="invoice.cityFrom" name="cityFrom" type="text" />
         </div>
         <div>
           <label for="">PostCode</label>
-          <input type="text" />
+          <input
+            [(ngModel)]="invoice.postCodeFrom"
+            name="postCodeFrom"
+            type="text"
+          />
         </div>
         <div>
           <label for="">Country</label>
-          <input type="text" />
+          <input
+            [(ngModel)]="invoice.countryFrom"
+            name="countryFrom"
+            type="text"
+          />
         </div>
       </div>
       <h2>Bill to</h2>
@@ -39,39 +51,63 @@
       </div>
       <div class="column-1">
         <label for="">Client's Email</label>
-        <input type="text" />
+        <input
+          [(ngModel)]="invoice.clientsEmail"
+          name="clientsEmail"
+          type="text"
+        />
       </div>
       <div class="column-1">
         <label for="">Street Adress</label>
-        <input type="text" />
+        <input
+          [(ngModel)]="invoice.streeAdressto"
+          name="streeAdressto"
+          type="text"
+        />
       </div>
       <div class="column-3">
         <div>
           <label for="">City</label>
-          <input type="text" />
+          <input [(ngModel)]="invoice.cityTo" name="cityTo" type="text" />
         </div>
         <div>
           <label for="">PostCode</label>
-          <input type="text" />
+          <input
+            [(ngModel)]="invoice.postCodeTo"
+            name="postCodeTo"
+            type="text"
+          />
         </div>
         <div>
           <label for="">Country</label>
-          <input type="text" />
+          <input [(ngModel)]="invoice.countryTo" name="countryTo" type="text" />
         </div>
       </div>
       <div class="column-2">
         <div class="direction-column">
           <label for="">Invoice Date</label>
-          <input type="text" />
+          <input
+            [(ngModel)]="invoice.invoiceDate"
+            name="invoiceDate"
+            type="text"
+          />
         </div>
         <div class="direction-column">
           <label for="">Payment Terms</label>
-          <input type="text" />
+          <input
+            [(ngModel)]="invoice.paymentTerms"
+            name="paymentTerms"
+            type="text"
+          />
         </div>
       </div>
       <div class="column-1">
         <label for="">Project Description</label>
-        <input type="text" />
+        <input
+          [(ngModel)]="invoice.projectDescription"
+          name="projectDescription"
+          type="text"
+        />
       </div>
       <h2>Item item-list</h2>
       <div class="item">
@@ -80,13 +116,13 @@
       </div>
       <div class="item">
         <div>
-          <input type="text" />
+          <input [(ngModel)]="invoice.itemName" name="itemName" type="text" />
         </div>
         <div>
-          <input type="text" />
+          <input [(ngModel)]="invoice.quantity" name="quantity" type="text" />
         </div>
         <div>
-          <input type="text" />
+          <input [(ngModel)]="invoice.price" name="price" type="text" />
         </div>
         <span>0000</span>
         <img src="/assets/icon-delete.svg" alt="" />
