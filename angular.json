@@ -105,6 +105,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "invoice-app:build:production",
+            "firebaseProject": "invoice-app-9a6ad",
+            "firebaseHostingSite": "invoice-app-9a6ad"
+          }
         }
       }
     }

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "invoice-app-9a6ad": {
+      "hosting": {
+        "invoice-app": [
+          "invoice-app-9a6ad"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "invoice-app-9a6ad"
+  }
+}

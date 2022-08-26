@@ -9,7 +9,7 @@ export class Invoice {
   cityTo: string = '';
   postCodeTo: number = 0;
   countryTo: string = '';
-  invoiceDate: number = 0;
+  invoiceDate!: Date;
   paymentTerms: string = '';
   projectDescription: string = '';
   itemName: string = '';
