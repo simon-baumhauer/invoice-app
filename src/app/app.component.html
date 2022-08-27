@@ -52,8 +52,9 @@
   <!-- Invoices -->
   <div class="invoice-container">
     <mat-card *ngFor="let invoice of allInvoices">
-      <span>{{ invoice["clientsName"] }}</span>
-      <span>{{ invoice["totalPrice"] }}</span>
+      <span class="name">{{ invoice["clientsName"] }}</span>
+      <span class="totalPrice">{{ invoice["totalPrice"] }}</span>
+      <span class="status">Pending</span>
     </mat-card>
   </div>
 </mat-drawer-container>

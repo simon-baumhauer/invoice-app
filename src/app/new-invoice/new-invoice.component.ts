@@ -20,7 +20,7 @@ export class NewInvoiceComponent implements OnInit {
     this.invoice.invoiceDate = new Date(this.invoiceDate);
     console.log('invoice:', this.invoice);
     // Close SideNav
-    this.opened = false;
+    // this.opened = false;
 
     this.firestore
       .collection('invoices')

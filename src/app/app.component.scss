@@ -8,6 +8,10 @@
 mat-drawer-container {
   height: 100vh;
   margin-left: 100px;
+
+  h1 {
+    margin: 20px 0px 10px 30px;
+  }
 }
 
 mat-drawer {
@@ -87,4 +91,26 @@ mat-card {
   width: 700px;
   display: flex;
   justify-content: space-between;
+
+  .name {
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .totalPrice {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: left;
+    width: 50px;
+  }
+
+  .status {
+    background-color: rgb(235, 174, 174);
+    color: red;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
 }
