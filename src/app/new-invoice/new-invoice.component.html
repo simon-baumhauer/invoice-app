@@ -1,0 +1,107 @@
+<form action="">
+  <h2>Bill From</h2>
+  <div class="column-1">
+    <label for="">Street Adress</label>
+    <input
+      [(ngModel)]="invoice.streeAdressFrom"
+      type="text"
+      name="streeAdressFrom"
+    />
+  </div>
+  <div class="column-3">
+    <div>
+      <label for="">City</label>
+      <input [(ngModel)]="invoice.cityFrom" name="cityFrom" type="text" />
+    </div>
+    <div>
+      <label for="">PostCode</label>
+      <input
+        [(ngModel)]="invoice.postCodeFrom"
+        name="postCodeFrom"
+        type="text"
+      />
+    </div>
+    <div>
+      <label for="">Country</label>
+      <input [(ngModel)]="invoice.countryFrom" name="countryFrom" type="text" />
+    </div>
+  </div>
+  <h2>Bill to</h2>
+  <div class="column-1">
+    <label for="">Client's Name</label>
+    <input [(ngModel)]="invoice.clientsName" type="text" name="clientsName" />
+  </div>
+  <div class="column-1">
+    <label for="">Client's Email</label>
+    <input [(ngModel)]="invoice.clientsEmail" name="clientsEmail" type="text" />
+  </div>
+  <div class="column-1">
+    <label for="">Street Adress</label>
+    <input
+      [(ngModel)]="invoice.streeAdressto"
+      name="streeAdressto"
+      type="text"
+    />
+  </div>
+  <div class="column-3">
+    <div>
+      <label for="">City</label>
+      <input [(ngModel)]="invoice.cityTo" name="cityTo" type="text" />
+    </div>
+    <div>
+      <label for="">PostCode</label>
+      <input [(ngModel)]="invoice.postCodeTo" name="postCodeTo" type="text" />
+    </div>
+    <div>
+      <label for="">Country</label>
+      <input [(ngModel)]="invoice.countryTo" name="countryTo" type="text" />
+    </div>
+  </div>
+  <div class="column-2">
+    <div class="direction-column">
+      <label for="">Invoice Date</label>
+      <input [(ngModel)]="this.invoiceDate" name="invoiceDate" type="date" />
+    </div>
+    <div class="direction-column">
+      <label for="">Account Assignment</label>
+      <input
+        [(ngModel)]="invoice.paymentTerms"
+        name="paymentTerms"
+        type="text"
+      />
+    </div>
+  </div>
+  <div class="column-1">
+    <label for="">Project Description</label>
+    <input
+      [(ngModel)]="invoice.projectDescription"
+      name="projectDescription"
+      type="text"
+    />
+  </div>
+  <h2>Item item-list</h2>
+  <div class="item">
+    <label for="">Item Name</label> <label for="">Qty.</label>
+    <label for="">Price</label> <label class="total-label">Total</label>
+  </div>
+  <div class="item">
+    <div>
+      <input [(ngModel)]="invoice.itemName" name="itemName" type="text" />
+    </div>
+    <div>
+      <input [(ngModel)]="invoice.quantity" name="quantity" type="text" />
+    </div>
+    <div>
+      <input [(ngModel)]="invoice.price" name="price" type="text" />
+    </div>
+    <span>0000</span>
+    <img src="/assets/icon-delete.svg" alt="" />
+  </div>
+  <button mat-stroked-button>+Add New Item</button>
+  <div style="display: flex; justify-content: space-between">
+    <button mat-stroked-button>Discard</button>
+    <button mat-flat-button color="primary" (click)="saveInvoice()">
+      Save
+    </button>
+  </div>
+</form>

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Invoice } from 'src/models/invoice.class';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 
 @Component({
   selector: 'app-root',
@@ -9,24 +9,22 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  status = new FormControl('');
+  statusList: string[] = ['peding', 'paid'];
+  opened!: boolean;
   // Form values
-  toppings = new FormControl('');
-  toppingList: string[] = ['peding', 'paid'];
-  invoice: Invoice = new Invoice();
-  invoiceDate!: Date;
+  allInvoices!: [];
 
   constructor(private firestore: AngularFirestore) {}
 
-  // Save form input for createting invoice
-  saveInvoice() {
-    this.invoice.invoiceDate = new Date(this.invoiceDate);
-    console.log('invoice:', this.invoice);
-
+  // Get Invoices from Firebase
+  ngOnInit(): void {
     this.firestore
       .collection('invoices')
-      .add(this.invoice.toJson())
-      .then((result: any) => {
-        console.log('adding Invoice:', result);
+      .valueChanges()
+      .subscribe((changes: any) => {
+        this.allInvoices = changes;
+        console.log('Received allInvoices:', this.allInvoices);
       });
   }
 }

@@ -11,9 +11,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from '../environments/environment';
+import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NewInvoiceComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

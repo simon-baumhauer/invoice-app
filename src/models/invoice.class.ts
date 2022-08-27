@@ -56,7 +56,7 @@ export class Invoice {
       itemName: this.itemName,
       quantity: this.quantity,
       price: this.price,
-      totalPrice: this.totalPrice,
+      totalPrice: (this.totalPrice = this.quantity + this.price),
     };
   }
 }
