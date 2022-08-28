@@ -1,0 +1,45 @@
+mat-drawer-container {
+  height: 100vh;
+  margin-left: 100px;
+}
+
+mat-drawer {
+  display: flex;
+  justify-content: center;
+  width: 550px;
+}
+mat-drawer-inner-conatienr {
+  display: flex;
+  justify-content: center;
+}
+
+// Header
+
+.header {
+  margin-top: 100px;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+
+  * {
+    margin-right: 30px;
+  }
+}
+
+.header-text {
+  margin-bottom: 1.34375em;
+}
+
+.example-additional-selection {
+  opacity: 0.75;
+  font-size: 0.75em;
+}
+
+.btn-sidenav {
+  width: 100px;
+  height: 50px;
+  border-radius: 99em;
+  margin-bottom: 1.34375em;
+  padding: 0;
+}

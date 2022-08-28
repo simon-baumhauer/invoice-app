@@ -14,9 +14,10 @@ import { environment } from '../environments/environment';
 import { NewInvoiceComponent } from './new-invoice/new-invoice.component';
 import { InvoiceDetailComponent } from './invoice-detail/invoice-detail.component';
 import { InvoicesComponent } from './invoices/invoices.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, NewInvoiceComponent, InvoiceDetailComponent, InvoicesComponent],
+  declarations: [AppComponent, NewInvoiceComponent, InvoiceDetailComponent, InvoicesComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

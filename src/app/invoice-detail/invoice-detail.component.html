@@ -1,1 +1,8 @@
-<p>invoice-detail works!</p>
+<div class="invoice-container">
+  <mat-card
+    ><span class="name">{{ invoiceId["clientsName"] }}</span>
+    <span class="totalPrice">{{ invoiceId["totalPrice"] }}</span>
+    <span class="status">Pending</span>
+  </mat-card>
+  <mat-card class="invoice-details"> </mat-card>
+</div>

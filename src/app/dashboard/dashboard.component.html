@@ -1,0 +1,48 @@
+<mat-drawer-container class="example-container" autosize>
+  <!-- Sidenav -->
+
+  <mat-drawer #drawer mode="side" [(opened)]="opened">
+    <app-new-invoice></app-new-invoice>
+    <!-- Form -->
+  </mat-drawer>
+  <!-- Header -->
+  <div class="header">
+    <div class="header-text">
+      <h1>Invoice</h1>
+      <h3>
+        There are
+        <span style="margin-right: 0">0</span> total invoices
+      </h3>
+    </div>
+    <mat-form-field appearance="fill">
+      <mat-label>Status</mat-label>
+      <mat-select [formControl]="status" multiple>
+        <mat-select-trigger>
+          {{status.value?.[0] || ''}}
+          <span
+            *ngIf="(status.value?.length || 0) > 1"
+            class="example-additional-selection"
+          >
+            (+{{ (status.value?.length || 0) - 1 }}
+            {{ status.value?.length === 2 ? "other" : "others" }})
+          </span>
+        </mat-select-trigger>
+        <mat-option *ngFor="let topping of statusList" [value]="topping">{{
+          topping
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button
+      mat-flat-button
+      color="primary"
+      class="btn-sidenav"
+      type="button"
+      mat-button
+      (click)="drawer.toggle()"
+    >
+      New Invoice
+    </button>
+  </div>
+  <!-- Invoices -->
+  <app-invoices></app-invoices>
+</mat-drawer-container>
