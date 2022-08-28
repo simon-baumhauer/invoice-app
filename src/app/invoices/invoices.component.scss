@@ -1,0 +1,39 @@
+.invoice-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+mat-card {
+  margin-top: 20px;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    background-color: rgba($color: #000000, $alpha: 0.03);
+  }
+  cursor: pointer;
+
+  .name {
+    width: 300px;
+    display: flex;
+    align-items: center;
+  }
+
+  .totalPrice {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    text-align: left;
+    width: 50px;
+  }
+
+  .status {
+    background-color: rgb(235, 174, 174, 0.4);
+    color: red;
+    font-weight: 500;
+    padding: 8px 10px;
+    border-radius: 5px;
+  }
+}
