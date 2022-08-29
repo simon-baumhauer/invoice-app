@@ -1,21 +1,35 @@
 <div class="invoice-container">
   <button [routerLink]="''">back</button>
-  <mat-card
-    ><span class="name">{{ invoiceId["clientsName"] }}</span>
+  <mat-card>
+    <span class="name">{{ invoiceId["clientsName"] }}</span>
     <span class="totalPrice">{{ invoiceId["totalPrice"] }}</span>
     <span class="status">Pending</span>
   </mat-card>
   <mat-card class="invoice-details">
-    <div class="project-identification">
-      <span class="id">{{ id }}</span>
-      <span>{{ invoiceId["projectDescription"] }}</span>
+    <div class="detail-header">
+      <div class="project-identification">
+        <span class="id">{{ id }}</span>
+        <span>{{ invoiceId["projectDescription"] }}</span>
+      </div>
+      <div class="location">
+        <span>{{ invoiceId["streeAdressFrom"] }}</span>
+        <span>{{ invoiceId["cityFrom"] }}</span>
+        <span>{{ invoiceId["postCodeFrom"] }}</span>
+        <span>{{ invoiceId["countryFrom"] }}</span>
+      </div>
     </div>
-    <div class="location">
-      <span>{{ invoiceId["streeAdressFrom"] }}</span>
-      <span>{{ invoiceId["cityFrom"] }}</span>
-      <span>{{ invoiceId["postCodeFrom"] }}</span>
-      <span>{{ invoiceId["countryFrom"] }}</span>
-    </div>
-    <table></table>
+
+    <table>
+      <tr>
+        <th>Invoice Date</th>
+        <th>Bill To</th>
+        <th>Sent to</th>
+      </tr>
+      <tr>
+        <td>18.07.1996</td>
+        <td>{{ invoiceId["clientsName"] }}</td>
+        <td>{{ invoiceId["clientsEmail"] }}</td>
+      </tr>
+    </table>
   </mat-card>
 </div>

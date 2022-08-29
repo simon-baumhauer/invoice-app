@@ -41,6 +41,15 @@ mat-card {
   font-weight: 500;
   font-size: 11px;
   color: #7e88c3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .detail-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
   .project-identification {
     display: flex;
@@ -59,5 +68,19 @@ mat-card {
     font-weight: 500;
     font-size: 11px;
     color: #7e88c3;
+  }
+
+  table {
+    margin-top: 30px;
+    th {
+      text-align: left;
+      font-weight: 500;
+    }
+
+    td {
+      font-weight: 700;
+      font-size: 15px;
+      color: black;
+    }
   }
 }
