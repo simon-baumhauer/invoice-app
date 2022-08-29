@@ -1,8 +1,21 @@
 <div class="invoice-container">
+  <button [routerLink]="''">back</button>
   <mat-card
     ><span class="name">{{ invoiceId["clientsName"] }}</span>
     <span class="totalPrice">{{ invoiceId["totalPrice"] }}</span>
     <span class="status">Pending</span>
   </mat-card>
-  <mat-card class="invoice-details"> </mat-card>
+  <mat-card class="invoice-details">
+    <div class="project-identification">
+      <span class="id">{{ id }}</span>
+      <span>{{ invoiceId["projectDescription"] }}</span>
+    </div>
+    <div class="location">
+      <span>{{ invoiceId["streeAdressFrom"] }}</span>
+      <span>{{ invoiceId["cityFrom"] }}</span>
+      <span>{{ invoiceId["postCodeFrom"] }}</span>
+      <span>{{ invoiceId["countryFrom"] }}</span>
+    </div>
+    <table></table>
+  </mat-card>
 </div>

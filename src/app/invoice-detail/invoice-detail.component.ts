@@ -11,6 +11,7 @@ import { Invoice } from 'src/models/invoice.class';
 export class InvoiceDetailComponent implements OnInit {
   invoiceId: any = '';
   invoice = new Invoice();
+  id: any = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -21,6 +22,7 @@ export class InvoiceDetailComponent implements OnInit {
     this.route.paramMap.subscribe((paramMap) => {
       this.invoiceId = paramMap.get('id');
       console.log('GOT ID', this.invoiceId);
+      this.id = this.invoiceId;
       this.getInvoice();
     });
   }
