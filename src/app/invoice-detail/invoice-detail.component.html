@@ -8,7 +8,7 @@
   <mat-card class="invoice-details">
     <div class="detail-header">
       <div class="project-identification">
-        <span class="id">{{ id }}</span>
+        <span class="id">#{{ id }}</span>
         <span>{{ invoiceId["projectDescription"] }}</span>
       </div>
       <div class="location">
@@ -29,6 +29,17 @@
         <td>18.07.1996</td>
         <td>{{ invoiceId["clientsName"] }}</td>
         <td>{{ invoiceId["clientsEmail"] }}</td>
+      </tr>
+      <tr>
+        <th>Invoice Date</th>
+        <th>Bill To</th>
+      </tr>
+      <tr>
+        <td>18.08.2023</td>
+        <td class="clientLocation">
+          {{ invoiceId["streeAdressto"] }}{{ invoiceId["cityTo"]
+          }}{{ invoiceId["postCodeTo"] }}{{ invoiceId["countryTo"] }}
+        </td>
       </tr>
     </table>
   </mat-card>

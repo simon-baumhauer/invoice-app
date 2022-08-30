@@ -82,5 +82,13 @@ mat-card {
       font-size: 15px;
       color: black;
     }
+
+    .clientLocation {
+      display: flex;
+      flex-direction: column;
+      font-weight: 500;
+      font-size: 11px;
+      color: #7e88c3;
+    }
   }
 }
