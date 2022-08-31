@@ -32,15 +32,36 @@
       </tr>
       <tr>
         <th>Invoice Date</th>
-        <th>Bill To</th>
       </tr>
       <tr>
-        <td>18.08.2023</td>
+        <td style="vertical-align: baseline">18.08.2023</td>
         <td class="clientLocation">
-          {{ invoiceId["streeAdressto"] }}{{ invoiceId["cityTo"]
-          }}{{ invoiceId["postCodeTo"] }}{{ invoiceId["countryTo"] }}
+          <span>{{ invoiceId["streeAdressto"] }}</span>
+          <span> {{ invoiceId["cityTo"] }}</span>
+          <span>{{ invoiceId["postCodeTo"] }}</span>
+          <span>{{ invoiceId["countryTo"] }}</span>
         </td>
       </tr>
     </table>
+    <mat-card class="price-info">
+      <table>
+        <tr>
+          <th>Invoice Date</th>
+          <th>Bill To</th>
+          <th>Sent to</th>
+          <th>blabla</th>
+        </tr>
+        <tr>
+          <td>18.07.1996</td>
+          <td>{{ invoiceId["clientsName"] }}</td>
+          <td>{{ invoiceId["clientsEmail"] }}</td>
+          <td>18.07.1996</td>
+        </tr>
+      </table>
+      <div class="total-price">
+        <span style="font-size: 18px">amount</span>
+        <span style="font-size: 32px">$ 450</span>
+      </div>
+    </mat-card>
   </mat-card>
 </div>

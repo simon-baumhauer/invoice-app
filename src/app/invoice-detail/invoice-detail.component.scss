@@ -37,7 +37,7 @@ mat-card {
 }
 
 .invoice-details {
-  height: 400px;
+  height: 500px;
   font-weight: 500;
   font-size: 11px;
   color: #7e88c3;
@@ -89,6 +89,44 @@ mat-card {
       font-weight: 500;
       font-size: 11px;
       color: #7e88c3;
+      position: relative;
+      top: -30px;
+    }
+  }
+
+  .price-info {
+    width: 96%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #f9fafe;
+    padding-bottom: 100px;
+
+    table {
+      width: 100%;
+      margin: 0;
+
+      tr {
+        height: 30px;
+      }
+    }
+
+    td {
+      height: 20px;
+      font-weight: 500;
+    }
+    .total-price {
+      background-color: #373b53;
+      color: white;
+      border-radius: 0px 0px 3px 3px;
+      padding: 0 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
     }
   }
 }
