@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Invoice } from 'src/models/invoice.class';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 
@@ -10,6 +10,9 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
 export class NewInvoiceComponent implements OnInit {
   invoice: Invoice = new Invoice();
   invoiceDate!: Date;
+  opened: boolean = false;
+
+  @Output() openedEvent = new EventEmitter<boolean>();
 
   constructor(private firestore: AngularFirestore) {}
 
@@ -19,14 +22,13 @@ export class NewInvoiceComponent implements OnInit {
   saveInvoice() {
     this.invoice.invoiceDate = new Date(this.invoiceDate);
     console.log('invoice:', this.invoice);
-    // Close SideNav
-    // this.opened = false;
 
     this.firestore
       .collection('invoices')
       .add(this.invoice.toJson())
       .then((result: any) => {
         console.log('adding Invoice:', result);
+        this.openedEvent.emit(this.opened);
       });
   }
 }

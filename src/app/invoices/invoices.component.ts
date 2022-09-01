@@ -23,8 +23,4 @@ export class InvoicesComponent implements OnInit {
         console.log('Received allInvoices:', this.allInvoices);
       });
   }
-
-  invoiceDetailsView(test: any) {
-    this.router.navigateByUrl('/invoice/' + test);
-  }
 }

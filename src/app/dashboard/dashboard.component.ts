@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -13,4 +13,9 @@ export class DashboardComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  receiveDateFromNewInvocie($event: any) {
+    this.opened = $event;
+    console.log(this.opened);
+  }
 }
